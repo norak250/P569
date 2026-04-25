@@ -9,7 +9,7 @@ try {
     Add-Type -AssemblyName System.Windows.Forms
     Add-Type -AssemblyName System.Drawing
 
-    $Path = Join-Path $env:USERPROFILE "Documents\PrinterChat"
+    $Path = Join-Path $env:USERPROFILE "Documents\PowerChat"
     if (!(Test-Path $Path)) { New-Item -ItemType Directory -Path $Path -Force | Out-Null }
     $File = Join-Path $Path "chat_log.txt"
     if (!(Test-Path $File)) { "[Ready...]" | Out-File $File -Encoding utf8 }
